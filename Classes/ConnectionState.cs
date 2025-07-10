@@ -18,8 +18,8 @@
         public static void Log(string message)
         {
             var dllPath = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            var dllDir = System.IO.Path.GetDirectoryName(dllPath);
-            var logPath = System.IO.Path.Combine(dllDir, "horizonrest.log");
+            var dllDir = Path.GetDirectoryName(dllPath);
+            var logPath = Path.Combine(dllDir, "horizonrest.log");
             File.AppendAllText(logPath, $"{DateTime.Now:u} {message}{Environment.NewLine}");
         }
 
