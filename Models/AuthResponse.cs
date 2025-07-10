@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using HorizonREST.Classes;
 
 namespace HorizonREST.Models
 {
@@ -14,10 +15,26 @@ namespace HorizonREST.Models
             var doc = JsonDocument.Parse(response);
             var root = doc.RootElement;
 
-            access_token = root.GetProperty("access_token").GetString();
-            refresh_token = root.GetProperty("refresh_token").GetString();
+            if (root.TryGetProperty("access_token", out var accessTokenProp))
+                access_token = accessTokenProp.GetString();
+            else
+                ConnectionState.Log("access_token not found in AuthResponse JSON.");
+
+            if (root.TryGetProperty("refresh_token", out var refreshTokenProp))
+                refresh_token = refreshTokenProp.GetString();
+            else
+                ConnectionState.Log("refresh_token not found in AuthResponse JSON.");
+
             HorizonServer = server;
         }
+        public static void RefreshToken(string response)
+        {
+            var doc = JsonDocument.Parse(response);
+            var root = doc.RootElement;
+            if (root.TryGetProperty("access_token", out var accessTokenProp))
+            AuthContainer.Instance.LastAuthResponse.access_token = accessTokenProp.GetString();
+        }
+
         public static AuthResponse FromJson(string server, string json)
         {
             return new AuthResponse(server, json);
