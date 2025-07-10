@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HorizonREST", "HorizonREST.csproj", "{101EA3C7-2337-43C2-ACFF-D49C77023887}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{101EA3C7-2337-43C2-ACFF-D49C77023887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{101EA3C7-2337-43C2-ACFF-D49C77023887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{101EA3C7-2337-43C2-ACFF-D49C77023887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{101EA3C7-2337-43C2-ACFF-D49C77023887}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6610DCEF-F77D-4C9D-816A-BC20C42F85D9}
+	EndGlobalSection
+EndGlobal
