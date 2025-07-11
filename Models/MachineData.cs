@@ -20,7 +20,7 @@ namespace HorizonREST.Models
         public required ManagedMachineData ManagedMachineData { get; set; }
 
         [JsonIgnore]
-        public System.DateTime? CreateDateTime => ManagedMachineData?.CreateDateTime;
+        public DateTime? CreateDateTime => ManagedMachineData?.CreateDateTime;
 
         public MachineData() { }
 

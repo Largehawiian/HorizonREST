@@ -8,7 +8,7 @@ public sealed class GetHorizonPoolsCommand : PSCmdlet
 {
     protected override void ProcessRecord()
     {
-        var result = Classes.HorizonREST.ApiClient.GetPools().GetAwaiter().GetResult();
+        var result = HorizonREST.ApiClient.GetPools().GetAwaiter().GetResult();
         WriteObject(result);
     }
 }

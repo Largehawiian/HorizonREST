@@ -1,5 +1,4 @@
 ﻿using System.Text.Json;
-using HorizonREST.Classes;
 
 namespace HorizonREST.Models
 {

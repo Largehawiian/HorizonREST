@@ -1,6 +1,4 @@
-﻿using HorizonREST.Models;
-
-namespace HorizonREST.Classes
+﻿namespace HorizonREST.Models
 {
     internal class AuthContainer
     {

@@ -1,4 +1,4 @@
-﻿using HorizonREST.Classes;
+﻿using HorizonREST.Models;
 using System.Management.Automation;
 
 namespace HorizonREST.PowerShell;
@@ -9,6 +9,6 @@ public sealed class RefreshTokenCommand : PSCmdlet
 {
     protected override void ProcessRecord()
     {
-        Classes.HorizonREST.ApiClient.RefreshToken(AuthContainer.Instance.LastAuthResponse.HorizonServer, AuthContainer.Instance.LastAuthResponse.access_token);
+        HorizonREST.ApiClient.RefreshToken(AuthContainer.Instance.LastAuthResponse.HorizonServer, AuthContainer.Instance.LastAuthResponse.access_token);
     }
 }

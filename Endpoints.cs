@@ -1,4 +1,4 @@
-﻿namespace HorizonREST.Classes
+﻿namespace HorizonREST
 {
     internal class Endpoints
     {

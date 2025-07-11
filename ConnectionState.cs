@@ -1,4 +1,6 @@
-﻿namespace HorizonREST.Classes
+﻿using HorizonREST.Models;
+
+namespace HorizonREST
 {
 
     public class ConnectionState : IDisposable

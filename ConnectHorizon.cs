@@ -3,7 +3,7 @@ using System.Management.Automation;
 using System.Text;
 using System.Text.Json;
 
-namespace HorizonREST.Classes
+namespace HorizonREST
 {
 
     public class HorizonREST
@@ -67,7 +67,7 @@ namespace HorizonREST.Classes
             {
                     var body = new
                 {
-                    refresh_token = refresh_token
+                    refresh_token
                 };
                 string refresh = JsonSerializer.Serialize(body);
                 UriBuilder uri = new UriBuilder("https", AuthContainer.Instance.LastAuthResponse.HorizonServer)
@@ -92,7 +92,7 @@ namespace HorizonREST.Classes
             {
                 var body = new
                 {
-                    refresh_token = refresh_token
+                    refresh_token
                 };
                 string refresh = JsonSerializer.Serialize(body);
                 UriBuilder uri = new UriBuilder("https", AuthContainer.Instance.LastAuthResponse.HorizonServer)

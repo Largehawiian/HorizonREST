@@ -1,5 +1,5 @@
 ﻿using System.Management.Automation;
-using HorizonREST.Classes;
+using HorizonREST.Models;
 
 namespace HorizonREST.PowerShell;
 
@@ -23,7 +23,7 @@ public sealed class GetHorizonServerCommand : PSCmdlet
             _renewalHandler = msg => ConnectionState.Log($"Renewal event received: {msg}");
             ConnectionState.Instance.OnRenewal += _renewalHandler;
         }
-        var result = Classes.HorizonREST.ApiClient.ConnectHorizon(Server, Credentials).GetAwaiter().GetResult();
+        var result = HorizonREST.ApiClient.ConnectHorizon(Server, Credentials).GetAwaiter().GetResult();
         AuthContainer.Instance.LastAuthResponse = result;
     }
 }

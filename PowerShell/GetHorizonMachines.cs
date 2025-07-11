@@ -8,7 +8,7 @@ public sealed class GetHorizonMachinesCommand : PSCmdlet
 {
     protected override void ProcessRecord()
     {
-        var result = Classes.HorizonREST.ApiClient.GetMachines().GetAwaiter().GetResult();
+        var result = HorizonREST.ApiClient.GetMachines().GetAwaiter().GetResult();
         WriteObject(result);
     }
 }

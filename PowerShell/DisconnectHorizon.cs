@@ -1,4 +1,4 @@
-﻿using HorizonREST.Classes;
+﻿using HorizonREST.Models;
 using System.Management.Automation;
 
 namespace HorizonREST.PowerShell;
@@ -9,6 +9,6 @@ public sealed class DisconnectHorizonCommand : PSCmdlet
 {
     protected override void ProcessRecord()
     {
-        Classes.HorizonREST.ApiClient.Disconnect(AuthContainer.Instance.LastAuthResponse.refresh_token);
+        HorizonREST.ApiClient.Disconnect(AuthContainer.Instance.LastAuthResponse.refresh_token);
     }
 }
